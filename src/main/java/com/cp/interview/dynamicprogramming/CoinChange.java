@@ -1,5 +1,7 @@
 package com.cp.interview.dynamicprogramming;
 
+import java.util.Arrays;
+
 /**
  * Created by curry on 6/19/17.
  */
@@ -25,6 +27,7 @@ public class CoinChange {
                     }
                 }
             }
+            System.out.println(Arrays.toString(dp));
         }
 
         if (dp[amount] >= Integer.MAX_VALUE)
@@ -34,7 +37,7 @@ public class CoinChange {
     }
 
     public static void main(String[] args) {
-        int[] nums = {2147483647};
-        System.out.println(coinChange(nums, 2));
+        int[] nums = {1,2,5};
+        System.out.println(coinChange(nums, 11));
     }
 }

@@ -19,14 +19,16 @@ public class CoinChange2 {
         // Pick all coins one by one and update the table[]
         // values after the index greater than or equal to
         // the value of the picked coin
-        for (int i=0; i< coins.length; i++)
-            for (int j=coins[i]; j<=amount; j++)
+        for (int i=0; i< coins.length; i++) {
+            for (int j=coins[i]; j<=amount; j++) {
                 table[j] += table[j-coins[i]];
-
+            }
+            System.out.println(Arrays.toString(table));
+        }
         return (int)table[amount];
     }
     public static void main(String[] args) {
-        int[] nums = {1, 2, 3};
-        System.out.println(change(4, nums));
+        int[] nums = {1, 2, 5};
+        System.out.println(change(5, nums));
     }
 }

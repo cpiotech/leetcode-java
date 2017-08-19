@@ -43,7 +43,7 @@ public class BalancedBinaryTree {
         root.left = left;
         root.right = right;
         left.left = leftleft;
-        leftleft.left = leftleftleft;
+        //leftleft.left = leftleftleft;
         System.out.println(isBalanced(root));
     }
 }
