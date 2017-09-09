@@ -28,10 +28,10 @@ public class MinimumPathSum {
         return dp[grid.length-1][grid[0].length-1];
     }
     public static void main(String[] args) {
-//        int[][] nums = {{0, 1, 2, 3},
-//                {4, 5, 6, 7},
-//                {8, 9, 10, 11}};
-        int[][] nums = {};
+        int[][] nums = {{0, 1, 2, 3},
+                {4, 5, 6, 7},
+                {8, 9, 10, 11}};
+        //int[][] nums = {};
         System.out.println(minPathSum(nums));
     }
 }

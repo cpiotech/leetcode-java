@@ -3,6 +3,7 @@ package com.cp.interview.binarytree;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 /**
  * Created by curry on 5/4/17.
@@ -51,26 +52,31 @@ public class BinaryTreeLevelOrderTraversal {
 //    }
     public static  List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> al = new ArrayList<>();
-        List<Integer> nodeValues = new ArrayList<>();
-        if (root == null)
+        if (root == null) {
             return al;
+        }
 
-        LinkedList<TreeNode> current = new LinkedList<TreeNode>();
-        LinkedList<TreeNode> next = new LinkedList<TreeNode>();
+        List<Integer> nodeValues = new ArrayList<>();
+        Queue<TreeNode> current = new LinkedList<>();
+        Queue<TreeNode> next = new LinkedList<>();
         current.add(root);
 
         while (!current.isEmpty()) {
             TreeNode node = current.remove();
 
-            if (node.left != null)
+            if (node.left != null) {
                 next.add(node.left);
-            if (node.right != null)
+            }
+
+            if (node.right != null) {
                 next.add(node.right);
+            }
 
             nodeValues.add(node.val);
+
             if (current.isEmpty()) {
                 current = next;
-                next = new LinkedList<TreeNode>();
+                next = new LinkedList<>();
                 al.add(nodeValues);
                 nodeValues = new ArrayList();
             }
