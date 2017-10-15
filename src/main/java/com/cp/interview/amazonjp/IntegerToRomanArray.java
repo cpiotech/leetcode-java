@@ -39,15 +39,15 @@ public class IntegerToRomanArray {
         return result;
     }
     static String intToRoman(int num) {
-        int l = map.floorKey(num);
-        if (num == l) {
+        int floor = map.floorKey(num);
+        if (num == floor) {
             return map.get(num);
         }
-        return map.get(l) + intToRoman(num - l);
+        return map.get(floor) + intToRoman(num - floor);
     }
 
     public static void main(String[] args) {
-        int[] nums = {1,2,3,4,5};
+        int[] nums = {1,2,3,4,5,8};
         System.out.println(Arrays.toString(romanizer(nums)));
     }
 }

@@ -44,7 +44,7 @@ public class BfsDfs {
 
     void DFS_Map() {
         flag = new boolean[number];
-        Stack<Integer> stack = new Stack<Integer>();
+        Stack<Integer> stack = new Stack<>();
         for (int i = 0; i < number; i++) {
             if (flag[i] == false) {
                 flag[i] = true;
@@ -68,7 +68,7 @@ public class BfsDfs {
 
     void BFS_Map() {
         flag = new boolean[number];
-        Queue<Integer> queue = new LinkedList<Integer>();
+        Queue<Integer> queue = new LinkedList<>();
         for (int i = 0; i < number; i++) {
             if (flag[i] == false) {
                 flag[i] = true;

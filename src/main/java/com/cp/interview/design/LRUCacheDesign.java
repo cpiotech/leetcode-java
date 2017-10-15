@@ -1,11 +1,6 @@
 package com.cp.interview.design;
 
-import com.cp.interview.binarytree.MaximumDepthBinaryTree;
-import com.cp.interview.linkedlist.LinkedListCycle;
-
 import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Map;
 
 /**
  * Created by curry on 9/3/17.

@@ -10,13 +10,13 @@ import java.util.List;
 public class TriangularBoxes {
     static long combinations(long t, int[] d) {
         int count = 0;
-        if (d.length == 0 || t == 0) {
+        if (d == null || d.length < 3 || t == 0) {
             return 0;
         }
 
         Arrays.sort(d);
 
-        for (int i = 0; i < d.length; i++) {
+        for (int i = 0; i < d.length - 2; i++) {
             int start = i + 1;
             int end = d.length - 1;
             while (start < end) {
@@ -33,7 +33,7 @@ public class TriangularBoxes {
     }
 
     public static void main(String[] args) {
-        int[] nums = {3, 1, 2, 4};
-        System.out.println((combinations(7, nums)));
+        int[] nums = {3, 1, 2, 4}; //1234
+        System.out.println((combinations(9, nums)));
     }
 }

@@ -2,6 +2,7 @@ package com.cp.interview.math;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import static java.lang.String.join;
@@ -12,20 +13,18 @@ import static java.lang.String.join;
 public class ThreeSum {
     public static List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
-        if(nums == null || nums.length<3)
+        if (nums == null || nums.length < 3)
             return result;
+        Collections.reverseOrder();
         Arrays.sort(nums);
-        for (int i=0; i<nums.length-2; i++) {
+
+        for (int i = 0; i < nums.length - 2; i++) {
             if (i == 0 || nums[i] > nums[i - 1]) {
                 int j = i + 1;
                 int k = nums.length - 1;
                 while (j < k) {
                     if (nums[i] + nums[j] + nums[k] == 0) {
-                        List<Integer> l = new ArrayList<>();
-                        l.add(nums[i]);
-                        l.add(nums[j]);
-                        l.add(nums[k]);
-                        result.add(l);
+                        result.add(Arrays.asList(nums[i], nums[j], nums[k]));
                         j++;
                         k--;
                         //handle duplicate here
@@ -43,10 +42,11 @@ public class ThreeSum {
         }
         return result;
     }
+
     public static void main(String[] args) {
         int items[] = {-1, 0, 1, 2, -1, -4};
         List<List<Integer>> result = threeSum(items);
         result.forEach(r ->
-            System.out.println(Arrays.toString(r.toArray())));
+                System.out.println(Arrays.toString(r.toArray())));
     }
 }
