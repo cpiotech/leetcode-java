@@ -43,6 +43,6 @@ public class LongestPalindromicSubstring {
     }
 
     public static void main(String[] args) throws IOException {
-        System.out.println(longestPalindrome("babad"));
+        System.out.println(longestPalindrome("bab"));
     }
 }

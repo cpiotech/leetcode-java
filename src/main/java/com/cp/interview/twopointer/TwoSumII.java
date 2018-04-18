@@ -24,7 +24,7 @@ public class TwoSumII {
             } else if (x > target) {
                 j--;
             } else {
-                return new int[] { i + 1, j + 1 };
+                return new int[]{ i + 1, j + 1 };
             }
         }
 
