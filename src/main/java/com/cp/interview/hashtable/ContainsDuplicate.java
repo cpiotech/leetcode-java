@@ -1,6 +1,5 @@
 package com.cp.interview.hashtable;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,7 +10,7 @@ public class ContainsDuplicate {
     public static boolean containsDuplicate(int[] nums) {
         Map<Integer, Boolean> map = new HashMap<>();
         for (int i : nums) {
-            if (map.get(i) != null) {
+            if (map.containsKey(i)) {
                 return true;
             } else {
                 map.put(i, Boolean.TRUE);

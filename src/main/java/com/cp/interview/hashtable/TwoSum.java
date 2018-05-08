@@ -2,14 +2,13 @@ package com.cp.interview.hashtable;
 
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 
 /**
  * Created by curry on 4/17/17.
  */
 public class TwoSum {
     public static int[] twoSum(int[] nums, int target) {
-        int[] index = new int[]{0,1};
+        int[] index = new int[2];
         HashMap<Integer,Integer> hm = new HashMap<>();
         for (int i = 0; i<nums.length; i++) {
             if (hm.containsKey(target - nums[i])) {
